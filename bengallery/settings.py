@@ -138,7 +138,7 @@ STATICFILES_DIRS = [
 cloudinary.config( 
   cloud_name = "bermard2030", 
   api_key = "372829562127799", 
-  api_secret = "YOUR_API_SECRET" 
+  api_secret = "-l-gRj-0LwQ7xLfnPWRE7DHfBu8" 
 )
 
 # Default primary key field type
