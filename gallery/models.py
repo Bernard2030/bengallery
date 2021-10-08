@@ -1,8 +1,10 @@
+
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Image(models.Model):
-    image= models.ImageField(upload_to='images/')
+    image = CloudinaryField('image')
     name = models.CharField(max_length =30)
     description = models.CharField(max_length =60)
     location = models.ForeignKey('Location',on_delete=models.CASCADE)
@@ -12,11 +14,13 @@ class Image(models.Model):
     def save_image(self):
         self.save()
 
+       
+
     def delete_image(self):
         self.delete()    
 
     @classmethod
-    def update_images(cls):
+    def get_images(cls):
         images = cls.objects.all()
         return images       
   
@@ -35,6 +39,9 @@ class Image(models.Model):
         image_location = cls.objects.filter(location=location)
         return image_location
 
+    def __str__(self):
+        return self.name()    
+
 
 
 
@@ -48,13 +55,18 @@ class Location(models.Model):
     def save_location(self):
         self.save()
 
-    def __str__(self):
-        return self.location_name()
+    def delete_location(self):
+        self.delete()
 
+    
     @classmethod
     def get_location(cls):
         locations = cls.objects.all()
-        return locations       
+        return locations 
+
+    def __str__(self):
+        return self.location_name()
+          
 
 
 
@@ -63,12 +75,17 @@ class Category(models.Model):
 
     def save_category(self):
         self.save()
-    def __str__(self):
-        return self.category_name()
-   
 
+    def delete_category(self):
+        self.save()
+
+    
     @classmethod
     def get_category(cls):
         category = cls.objects.all()
-        return category      
+        return category 
+
+    def __str__(self):
+        return self.category_name()     
+            
 
