@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for loc in image_location %}
+        <p>location {{loc.name}}</p>
+        <img src="{{loc.image.url}}" alt="">
+        <p>description {{loc.description}}</p>
+        <p>category {{loc.category}}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

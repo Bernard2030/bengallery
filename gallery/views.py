@@ -22,15 +22,28 @@ def search_results(request):
         searched_image = Image.search_by_title(search_term)
         message = f"{search_term}"
 
-        return render(request, 'all-gallery/search.html',{"message":message,"images": searched_image})
+        return render(request, 'search.html',{"message":message,"images": searched_image})
 
     else:
         message = "You haven't searched for any image category"
-        return render(request, 'all-gallery/search.html',{"message":message})  
+        return render(request, 'search.html',{"message":message})  
 
 def single_image(request,id):
     try:
         photo = Image.objects.get(id = id)
     except ObjectDoesNotExist:
         raise Http404()
-    return render(request,"all-gallery/single_image.html", {"photo":photo})          
+    return render(request,"single_image.html", {"photo":photo}) 
+
+def search_by_location(request,location):
+    image_location = Image.filter_image_by_location(location)
+    
+    return render(request,"location_photos.html", {"image_location":image_location})  
+
+
+def search_by_category(request,category):
+    image_category= Image.get_category(category)
+    
+    return render(request,"category.html", {"image_category":image_category})           
+
+            
