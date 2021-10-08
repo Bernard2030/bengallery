@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+
+ {% block content %}
+
+ <div class="container">
+     <div class="row">
+         <h1>Image Name {{photo.name}}</h1>
+         <img src="{{photo.image.url}}" alt="">
+         <p>Description {{photo.description}}</p>
+         <p>Category {{photo.category}}</p>
+         <p>Location {{photo.location}}</p>
+     </div>
+
+
+
+ </div>
+
+ {% endblock %}

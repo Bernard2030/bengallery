@@ -1,4 +1,4 @@
-{%extends 'all-news/base.html'%} 
+{%extends 'base.html'%} 
 {% block content %}
 <div class="container">
 
@@ -12,14 +12,20 @@
   </div>
 
   <div class="row">
+      {% if image %}
+      {% for pic in image %}
 
-  {% if images %}
-    {% for image in images %}
-      <div class="col-sm-6 col-md-3">
-          <h1>{{image.title}}</h1>
-      </div>
+ <div class="col-sm-6">
+
+     <img src="{{pic.image.url}}}" alt="image" width="400px">
+        <h3>{{pic.name}}</h3>
+        <p> Description {{pic.description}}</p>
+        <h3>Location {{pic.location}}</h3>   
+
+    </div>
     {% endfor %}
-  {% endif %}
+    {% endif %}
+  
   </div>
 </div>
 {% endblock %}
