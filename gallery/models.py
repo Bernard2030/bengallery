@@ -69,8 +69,8 @@ class Location(models.Model):
         locations = cls.objects.all()
         return locations 
 
-    def __str__(self):
-        return self.location_name()
+    # def __str__(self):
+    #     return self.location_name()
           
 
 
@@ -90,7 +90,7 @@ class Category(models.Model):
         category = cls.objects.all()
         return category 
 
-    def __str__(self):
-        return self.category_name()     
+    # def __str__(self):
+    #     return self.category_name()     
             
 

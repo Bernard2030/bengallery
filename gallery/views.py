@@ -4,8 +4,7 @@ from .models import Image, Location, Category
 from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
-def welcome(request):
-    return render(request,'welcome.html')
+
 
 
 def Home(request):
