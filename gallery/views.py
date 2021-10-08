@@ -7,6 +7,15 @@ from django.core.exceptions import ObjectDoesNotExist
 def welcome(request):
     return render(request,'welcome.html')
 
+
+def Home(request):
+    category = Category.get_category()
+    location = Location.get_location()
+    return render(request,'photos.html',{'category':category, 'location':location})
+
+
+
+
 def search_results(request):
 
     if 'image' in request.GET and request.GET["image"]:
