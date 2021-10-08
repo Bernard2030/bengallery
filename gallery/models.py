@@ -39,6 +39,11 @@ class Image(models.Model):
         image_location = cls.objects.filter(location=location)
         return image_location
 
+    @classmethod
+    def search_by_title(cls,search_term):
+        gallery = cls.objects.filter(title__icontains=search_term)
+        return gallery   
+
     def __str__(self):
         return self.name()    
 
