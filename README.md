@@ -7,19 +7,30 @@ Bernard Opiyo
 Use the following command to install all the requirement applications. pip freeze -r requirements.txt
 
 ## setup
-Run git clone https://github.com/Bernard2030/bengallery or download the zip file from github.
+* Run git clone https://github.com/Bernard2030/bengallery or download the zip file from github.
 
 After extracting the files,
 
-Navigate to the project folder cd into it.
+* Navigate to the project folder cd into it.
 
-Creating a virtual environment virtualenv virtual.
+* Creating a virtual environment virtualenv virtual.
 
-Activating the virtual environment source virtual/bin/activate.
+* Activating the virtual environment source virtual/bin/activate.
 
-Running the application python3 manage.py runserver
+* Running the application python3 manage.py runserver
 
-Running tests python3 manage.py test.
+* Running tests python3 manage.py test.
+
+* create database
+    You will need to create a database a new postgress database by typing the following command to access postgress
+        $ psql
+    Then run below query to create a new database named bengallery
+        
+* create Database migrations
+    make migrations on postgres using django
+        python3.8 manage.py makemigrations 
+    then run the below command.
+        python3.8 manage.py migrate
 
 ## Technologies used
 * Python3.8
@@ -37,7 +48,7 @@ user story
 
 
 ## pictorial Discription
-
+* pic contents
 	
 	
 	
@@ -50,4 +61,4 @@ There are no known bugs at the moment if you find any reach out through broberna
 To contribute on the application you can do so by reaching me on brobernard.254@gmail.com
 
 ## LICENSE
-MIT License Copyright (c) [2021] [Bernard Opiyo] Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+This project is under [MIT](LICENSE).

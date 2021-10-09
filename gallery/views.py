@@ -42,8 +42,13 @@ def search_by_location(request,location):
 
 
 def search_by_category(request,category):
+
+
     image_category= Image.get_category(category)
+
+    image_all = Image.search_image_by_category(image_category)
     
-    return render(request,"category.html", {"image_category":image_category})           
+    
+    return render(request,"category.html", {"image_all":image_all})           
 
             
