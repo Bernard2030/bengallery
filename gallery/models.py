@@ -1,10 +1,13 @@
 
 from django.db import models
-from cloudinary.models import CloudinaryField
+
+
+# from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Image(models.Model):
-    image = CloudinaryField('image')
+    # image = CloudinaryField('image')
+    image = models.ImageFielld(upload_to='image/')
     name = models.CharField(max_length =30)
     description = models.CharField(max_length =60)
     location = models.ForeignKey('Location',on_delete=models.CASCADE)
@@ -40,8 +43,8 @@ class Image(models.Model):
         return image_location
 
     @classmethod
-    def search_by_title(cls,search_term):
-        gallery = cls.objects.filter(title__icontains=search_term)
+    def search_by_name(cls,search_term):
+        gallery = cls.objects.filter(name__icontains=search_term)
         return gallery   
 
     def __str__(self):
@@ -69,8 +72,8 @@ class Location(models.Model):
         locations = cls.objects.all()
         return locations 
 
-    # def __str__(self):
-    #     return self.location_name()
+    def __str__(self):
+        return self.location_name()
           
 
 
@@ -90,7 +93,7 @@ class Category(models.Model):
         category = cls.objects.all()
         return category 
 
-    # def __str__(self):
-    #     return self.category_name()     
+    def __str__(self):
+        return self.category_name()     
             
 

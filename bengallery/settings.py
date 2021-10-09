@@ -12,9 +12,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
+# import cloudinary
+# import cloudinary.uploader
+# import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'gallery.apps.GalleryConfig',
     'bootstrap4',
-    'cloudinary'
+    # 'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -135,11 +135,11 @@ STATICFILES_DIRS = [
 ]
 
 # adding config
-cloudinary.config( 
-  cloud_name = "bermard2030", 
-  api_key = "372829562127799", 
-  api_secret = "-l-gRj-0LwQ7xLfnPWRE7DHfBu8" 
-)
+# cloudinary.config( 
+#   cloud_name = "bermard2030", 
+#   api_key = "372829562127799", 
+#   api_secret = "-l-gRj-0LwQ7xLfnPWRE7DHfBu8" 
+# )
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
