@@ -7,7 +7,7 @@ from django.db import models
 # Create your models here.
 class Image(models.Model):
     # image = CloudinaryField('image')
-    image = models.ImageFielld(upload_to='image/')
+    image = models.ImageField(upload_to='image/')
     name = models.CharField(max_length =30)
     description = models.CharField(max_length =60)
     location = models.ForeignKey('Location',on_delete=models.CASCADE)
@@ -48,7 +48,7 @@ class Image(models.Model):
         return gallery   
 
     def __str__(self):
-        return self.name()    
+        return self.name    
 
 
 
@@ -73,7 +73,7 @@ class Location(models.Model):
         return locations 
 
     def __str__(self):
-        return self.location_name()
+        return self.location_name
           
 
 
@@ -94,6 +94,6 @@ class Category(models.Model):
         return category 
 
     def __str__(self):
-        return self.category_name()     
+        return self.category_name     
             
 

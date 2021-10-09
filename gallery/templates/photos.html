@@ -8,11 +8,11 @@
         <div class="card-body">
             <ul>
                 <li>
-                    <a href="{% url 'gallery' %}"> All</a>
+                    <a href="{% url 'Home' %}"> All</a>
                 </li>
              {% for category in image_category %}
                 <li>
-                    <a href="{%url 'gallery' %}?category={{category.name}}">{{category.category_name}}</a>
+                    <a href="{%url 'Home' %}?category={{category.name}}">{{category.category_name}}</a>
                 </li>
                 {% endfor %}
             </ul>
