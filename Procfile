@@ -1,0 +1,1 @@
+web: gunicorn bengallery.wsgi --log-file -
