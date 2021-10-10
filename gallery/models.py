@@ -2,14 +2,14 @@
 from django.db import models
 
 
-# from cloudinary.models import CloudinaryField
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Image(models.Model):
-    # image = CloudinaryField('image')
-    image = models.ImageField(upload_to='image/')
+    image = CloudinaryField('image')
+    # image = models.ImageField(upload_to='image/')
     name = models.CharField(max_length =30)
-    description = models.CharField(max_length =60)
+    description = models.CharField(max_length =200)
     location = models.ForeignKey('Location',on_delete=models.CASCADE)
     category = models.ForeignKey('Category',on_delete=models.CASCADE)
 

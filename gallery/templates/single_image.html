@@ -2,17 +2,27 @@
 
  {% block content %}
 
- <div class="container">
-     <div class="row">
-         <h1>Image Name {{photo.name}}</h1>
-         <img src="{{photo.image.url}}" alt="">
-         <p>Description {{photo.description}}</p>
-         <p>Category {{photo.category}}</p>
-         <p>Location {{photo.location}}</p>
-     </div>
+ <div class="container" style="align-self: center;">
+    <div class="row">
+        <div class="col-md-4">
+            
+                <div class="card" style="width: 30rem;">
+                    <h3 class="card-title" style="color: chocolate;">{{photo.name}}</h3>
+                    <img class="card-img-top" src="{{photo.image.url}}" alt="Card image cap" width="400px">
+                    <div class="card-body">
+                        <h5> <span style="color: chocolate;" >Image Name:</span><span>{{photo.name}}</span></h1>
+                        <p><h6><span style="color: chocolate;" >Description:</span> </h6><span>{{photo.description}}</span></p>
+                        <p> <span style="color: chocolate;" >Category:</span> <span>{{photo.category}}</span></p>
+                        <p><span style="color: chocolate;" >Location:</span> <span>{{photo.location}}</span></p>
 
-
-
- </div>
-
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<style>
+    body{
+        background-color: deepskyblue;
+    }
+</style>
  {% endblock %}

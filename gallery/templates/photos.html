@@ -3,22 +3,13 @@
 <div class="container">
     <div class="row">
    <div class="col-4">
-    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-        <div class="row"><div class="card-header"><h1>Category</h1></div></div>
-        <div class="card-body">
-            <ul>
-                <li>
-                    <a href="{% url 'Home' %}"> All</a>
-                </li>
-             {% for category in image_category %}
-                <li>
-                    <a href="{%url 'Home' %}?category={{category.name}}">{{category.category_name}}</a>
-                </li>
-                {% endfor %}
-            </ul>
-         
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-success">Welcome to BenGallery</div>
+        <div class="card-body text-success">
+          <h5 class="card-title">You can view images either by category or location</h5><br>
+          <p class="card-text">You can also search the image directly from the search bar depending on available category or location</p>
         </div>
+        <!-- <div class="card-footer bg-transparent border-success">Footer</div> -->
       </div>
 
    </div>
@@ -45,9 +36,7 @@
                 </div>
             </div></div>
           </div>
-          <!-- <div class="col">
-            <div class="p-3 border bg-light">Row column 3</div>
-          </div> -->
+          
         </div>
       </div>
    </div>
@@ -130,6 +119,12 @@
     }
     .dropdown a:hover {
         background-color: #ddd;
+    }
+
+    body{
+        background: url(https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?size=626&ext=jpg&ga=GA1.2.2032638131.1628035200) no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
 </style>
