@@ -52,6 +52,7 @@ user story
 <img src="./images/image2.png" alt="landing"/>
 <img src="./images/image3.png" alt="landing"/>
 <img src="./images/image4.png" alt="landing"/>
+<img src="./images/image5.png" alt="landing"/>
 	
 	
 	
