@@ -48,11 +48,11 @@ user story
 
 
 ## pictorial Discription
-<img src="./images/image1.png" alt="landing"/>
-<img src="./images/image2.png" alt="landing"/>
-<img src="./images/image3.png" alt="landing"/>
-<img src="./images/image4.png" alt="landing"/>
-<img src="./images/image5.png" alt="landing"/>
+<img src="image/image1.png" alt="landing"/>
+<img src="image/image2.png" alt="landing"/>
+<img src="image/image3.png" alt="landing"/>
+<img src="image/image4.png" alt="landing"/>
+<img src="image/image5.png" alt="landing"/>
 	
 	
 	
