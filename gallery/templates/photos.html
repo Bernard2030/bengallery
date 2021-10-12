@@ -26,17 +26,14 @@
             </div></div>
           </div>
           <div class="col">
-            <div class="p-3 border bg-light"><div class="w3-dropdown-click">
-                <button onclick="myFunction2()" class="w3-button  dropbtn">Filter by Location</button>
-                <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
-                    {% for my_loc in image_location %}
-                    <a href="/location/{{my_loc.id}}" class="w3-bar-item w3-button"> {{my_loc.location_name}} </a>
-                    <!-- <p>{{locationpic}}</p> -->
-                    {% endfor %}
+            <div class="p-3 border bg-light"><div class="dropdown">
+                <button onclick="myFunction2()" class=" w3-button dropbtn">Filter by Location</button>
+                <div id="myDropdown" class="dropdown-content">
+                    {% for my_catpic in location %}
+                    <a href="/location/{{my_catpic.id}}">{{my_catpic.location_name}}</a> {% endfor %}
                 </div>
             </div></div>
           </div>
-          
         </div>
       </div>
    </div>
