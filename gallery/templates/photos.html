@@ -25,17 +25,38 @@
                 </div>
             </div></div>
           </div>
-          <div class="col">
-            <div class="p-3 border bg-light"><div class="w3-dropdown-click">
-                <button onclick="myFunction2()" class="w3-button  dropbtn">Filter by Location</button>
-                <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <div class="dropdown">
+                <button onclick="loctionFns()" class=" w3-button dropbtn">Filter by Location</button>
+                <div id="myDropdown1" class="dropdown-content">
                     {% for my_loc in image_location %}
-                    <a href="/location/{{my_loc.id}}" class="w3-bar-item w3-button"> {{my_loc.location_name}} </a>
-                    <!-- <p>{{image_location}}</p> -->
-                    {% endfor %}
+                    <a href="/location/{{my_loc.id}}"> {{my_loc.location_name}}</a> {% endfor %}
                 </div>
-            </div></div>
-          </div>
+            </div>
+        </div>
+
+        <!-- Scripts for category filter functions -->
+        <script>
+            /* When the user clicks on the button, 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                toggle between hiding and showing the dropdown content */
+            function loctionFns() {
+                document.getElementById("myDropdown1").classList.toggle("show");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function (event) {
+                if (!event.target.matches('.dropbtn ')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
           
         </div>
       </div>
@@ -68,22 +89,22 @@
 
                 // function 2
 
-                function myFunction2() {
-                    document.getElementById("Demo").classList.toggle("show");
-                }
-                // Close the dropdown if the user clicks outside of it
-                window.onclick = function (event) {
-                    if (!event.target.matches('.dropbtn ')) {
-                        var dropdowns = document.getElementsByClassName("dropdown-content");
-                        var i;
-                        for (i = 0; i < dropdowns.length; i++) {
-                            var openDropdown = dropdowns[i];
-                            if (openDropdown.classList.contains('show')) {
-                                openDropdown.classList.remove('show');
-                            }
-                        }
-                    }
-                }
+                // function myFunction2() {
+                //     document.getElementById("Demo").classList.toggle("show");
+                // }
+                // // Close the dropdown if the user clicks outside of it
+                // window.onclick = function (event) {
+                //     if (!event.target.matches('.dropbtn ')) {
+                //         var dropdowns = document.getElementsByClassName("dropdown-content");
+                //         var i;
+                //         for (i = 0; i < dropdowns.length; i++) {
+                //             var openDropdown = dropdowns[i];
+                //             if (openDropdown.classList.contains('show')) {
+                //                 openDropdown.classList.remove('show');
+                //             }
+                //         }
+                //     }
+                // }
                 // endfunction2
             </script>
 
